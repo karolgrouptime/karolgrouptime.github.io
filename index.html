@@ -1,171 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Göwher's Portfolio</title>
-<style>
-  /* Fonts & colors */
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Great+Vibes&display=swap');
-
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #fff8f0;
-    color: #4b3b3b;
-    line-height: 1.6;
-  }
-
-  header {
-    background: linear-gradient(135deg, #fbc5c5, #f9a8a8);
-    padding: 50px 20px;
-    text-align: center;
-    box-shadow: 0 3px 10px rgba(255, 182, 182, 0.6);
-  }
-
-  header h1 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 3.5rem;
-    margin: 0;
-    color: #6f2a2a;
-    letter-spacing: 0.05em;
-  }
-
-  header p {
-    font-weight: 600;
-    font-size: 1.25rem;
-    margin-top: 10px;
-    color: #7a4545;
-  }
-
-  nav {
-    margin-top: 20px;
-  }
-
-  nav a {
-    color: #6f2a2a;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
-  }
-
-  nav a:hover {
-    color: #f36b6b;
-  }
-
-  main {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
-  }
-
-  section {
-    margin-bottom: 60px;
-  }
-
-  .section-title {
-    font-size: 2rem;
-    border-bottom: 3px solid #f36b6b;
-    display: inline-block;
-    padding-bottom: 5px;
-    margin-bottom: 30px;
-    color: #6f2a2a;
-  }
-
-  p {
-    font-size: 1.1rem;
-    color: #5a4545;
-  }
-
-  .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-  }
-
-  .gallery img {
-    width: 80vw;
-    max-width: 700px;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(243, 107, 107, 0.4);
-    transition: transform 0.3s ease;
-  }
-
-  .gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 25px rgba(243, 107, 107, 0.6);
-  }
-
-  footer {
-    background: linear-gradient(135deg, #f9a8a8, #fbc5c5);
-    text-align: center;
-    padding: 25px 15px;
-    font-weight: 600;
-    color: #6f2a2a;
-    box-shadow: 0 -3px 10px rgba(255, 182, 182, 0.6);
-  }
-
-  /* Responsive */
-  @media (min-width: 768px) {
-    .gallery img {
-      width: 45vw;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rech Rejepow | PHP Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #1a1a1a;
+      margin: 0;
+      padding: 0;
+      color: #f0f0f0;
+      transition: background 0.4s ease, color 0.4s ease;
     }
-  }
-</style>
+    nav {
+      background: #2a2a2a;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    }
+    nav h1 {
+      margin: 0;
+      color: #64b5f6;
+      font-size: 1.3rem;
+    }
+    .lang-switcher button {
+      background: #2e2e2e;
+      border: 1px solid #444;
+      color: #64b5f6;
+      font-size: 1.2rem;
+      cursor: pointer;
+      margin-left: 0.5rem;
+      border-radius: 6px;
+      padding: 0.3rem 0.6rem;
+      transition: all 0.3s ease;
+    }
+    .lang-switcher button:hover {
+      background: #3a3a3a;
+      transform: scale(1.05);
+    }
+    header {
+      background: linear-gradient(120deg, #1c1c1c, #292929);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      animation: fadeIn 1s ease;
+    }
+    header img {
+      width: 120px;
+      border-radius: 50%;
+      border: 4px solid #64b5f6;
+      margin-bottom: 1rem;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #242424;
+      border-radius: 15px;
+      box-shadow: 0 4px 25px rgba(0,0,0,0.4);
+      animation: slideUp 1s ease;
+    }
+    h1, h2 {
+      color: #ffffff;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    a {
+      color: #64b5f6;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .project-img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 10px;
+      margin: 1rem 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.6);
+      transition: transform 0.3s ease;
+    }
+    .project-img:hover {
+      transform: scale(1.03);
+    }
+    .lang-block {
+      margin-bottom: 3rem;
+    }
+    .lang-block h2 {
+      margin-top: 0;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .lang-switcher {
+        margin-top: 0.5rem;
+      }
+    }
+  </style>
+  <script>
+    function switchLang(lang) {
+      const blocks = document.querySelectorAll('.lang-block');
+      blocks.forEach(block => {
+        block.style.display = 'none';
+      });
+      document.querySelectorAll(`.lang-${lang}`).forEach(block => {
+        block.style.display = 'block';
+      });
+    }
+    window.onload = () => {
+      switchLang('en');
+    };
+  </script>
 </head>
 <body>
 
+<nav>
+  <h1>Rech Rejepow</h1>
+  <div class="lang-switcher">
+    <button onclick="switchLang('en')">en</button>
+    <button onclick="switchLang('ru')">ru</button>
+  </div>
+</nav>
+
 <header>
-  <h1>Göwher</h1>
-  <p>English Teacher | Illustrator | Calligraphy Artist</p>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <img src="img/profil.jpg" alt="Profile Photo">
+  <h1>Full-Stack PHP Developer</h1>
 </header>
 
 <main>
-  <section id="about">
-    <h2 class="section-title">About Me</h2>
-    <p>Hi! I'm Göwher — passionate about teaching English, crafting beautiful illustrations, and creating elegant calligraphy.  
-       I believe creativity enriches both language and art, and I love inspiring my students and audience alike.</p>
-  </section>
 
-  <section id="portfolio">
-    <h2 class="section-title">My Work</h2>
+  <div class="lang-block lang-en">
+    <h2>✨ About Me</h2>
+    <p>I am a full-stack PHP developer from Turkmenistan with 5+ years of experience. I specialize in building secure, scalable, and performant web applications using modern technologies.</p>
+  </div>
 
-    <h3>🎨 Illustrations</h3>
-    <div class="gallery">
-      <img src="imges/img1.jpg" alt="Illustration artwork 1" />
-      <img src="imges/img2.jpg" alt="Illustration artwork 2" />
-    </div>
+  <div class="lang-block lang-ru">
+    <h2>✨ Обо мне</h2>
+    <p>Я Full-Stack PHP разработчик из Туркменистана с более чем 5-летним опытом. Специализируюсь на разработке защищённых, масштабируемых и эффективных веб-приложений.</p>
+  </div>
 
-    <h3>✒️ Calligraphy</h3>
-    <div class="gallery">
-      <img src="imges/img3.jpg" alt="Calligraphy artwork 1" />
-      <img src="imges/img4.jpg" alt="Calligraphy artwork 2" />
-    </div>
+  <div class="lang-block lang-en">
+    <h2>📅 Projects</h2>
+    <ul>
+      <li><strong>Halk Market Mobile App</strong><br>
+        <a href="https://play.google.com/store/apps/details?id=tm.com.halkmarket.app&hl=tr&pli=1" target="_blank">Google Play Link</a><br>
+        <img src="img/img1.png" class="project-img">
+      </li>
+      <li><strong>Yakyndar Online Platform</strong><br>
+        <a href="https://www.yakyndar.com.tm/ru" target="_blank">yakyndar.com.tm</a><br>
+        <img src="img/img3.png" class="project-img">
+      </li>
+      <li><strong>Turkmenportal News Portal</strong><br>
+        <a href="https://turkmenportal.com/" target="_blank">turkmenportal.com</a><br>
+        <img src="img/img2.png" class="project-img">
+      </li>
+    </ul>
+  </div>
 
-    <h3>📘 English Teaching</h3>
-    <p>I provide engaging, interactive lessons tailored for all levels — from beginners to advanced students.  
-       My focus is on communication, writing, and cultural understanding.</p>
-  </section>
+  <div class="lang-block lang-ru">
+    <h2>📅 Проекты</h2>
+    <ul>
+      <li><strong>Мобильное приложение Halk Market</strong><br>
+        <a href="https://play.google.com/store/apps/details?id=tm.com.halkmarket.app&hl=tr&pli=1" target="_blank">Ссылка в Google Play</a><br>
+        <img src="img/img1.png" class="project-img">
+      </li>
+      <li><strong>Онлайн-платформа Yakyndar</strong><br>
+        <a href="https://www.yakyndar.com.tm/ru" target="_blank">yakyndar.com.tm</a><br>
+        <img src="img/img3.png" class="project-img">
+      </li>
+      <li><strong>Новостной портал Turkmenportal</strong><br>
+        <a href="https://turkmenportal.com/" target="_blank">turkmenportal.com</a><br>
+        <img src="img/img2.png" class="project-img">
+      </li>
+    </ul>
+  </div>
 
-  <section id="contact">
-    <h2 class="section-title">Get in Touch</h2>
-    <p>Email: <a href="mailto:gowher@example.com">gowher@example.com</a></p>
-    <p>Instagram: <a href="https://instagram.com/gowher_creative" target="_blank">@gowher_creative</a></p>
-  </section>
+  <div class="lang-block lang-en">
+    <h2>🛠️ Tech Stack</h2>
+    <ul>
+      <li>Languages: PHP, JavaScript, Python,</li>
+      <li>Frontend: HTML5, CSS3, Bootstrap, jQuery, Vue.js, Nuxt.js</li>
+      <li>Backend: Laravel, MySQL, PostgreSQL, API development</li>
+      <li>Tools: Git, Linux, Apache, Nginx, phpMyAdmin, SSH</li>
+      <li>Data Formats: JSON, XML</li>
+    </ul>
+  </div>
+
+  <div class="lang-block lang-ru">
+    <h2>🛠️ Стек технологий</h2>
+    <ul>
+      <li>Языки: PHP, JavaScript, Python</li>
+      <li>Фронтенд: HTML5, CSS3, Bootstrap, jQuery, Vue.js, Nuxt.js</li>
+      <li>Бэкенд: Laravel, MySQL, PostgreSQL, API</li>
+      <li>Сервер: Git, Linux, Apache, Nginx, phpMyAdmin, SSH</li>
+      <li>Форматы: JSON, XML</li>
+    </ul>
+  </div>
+
+  <div class="lang-block lang-en">
+    <h2>🌍 Languages</h2>
+    <ul>
+      <li>Turkmen (native)</li>
+      <li>Russian (fluent)</li>
+      <li>English (fluent)</li>
+    </ul>
+  </div>
+
+  <div class="lang-block lang-ru">
+    <h2>🌍 Языки</h2>
+    <ul>
+      <li>Туркменский (родной)</li>
+      <li>Русский (свободно)</li>
+      <li>Английский (свободно)</li>
+    </ul>
+  </div>
+
+  <div class="lang-block lang-en">
+    <h2>✉️ Contact</h2>
+    <p>Email: <a href="mailto:karol.group.time@gmail.com">karol.group.time@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/karolgrouptime" target="_blank">github.com/karolgrouptime</a></p>
+  </div>
+
+  <div class="lang-block lang-ru">
+    <h2>✉️ Контакт</h2>
+    <p>Email: <a href="mailto:karol.group.time@gmail.com">karol.group.time@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/karolgrouptime" target="_blank">github.com/karolgrouptime</a></p>
+  </div>
+
 </main>
-
-<footer>
-  &copy; 2025 Göwher's Portfolio | Made with ❤️
-</footer>
 
 </body>
 </html>
